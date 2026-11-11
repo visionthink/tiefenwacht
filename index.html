@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
 <meta name="theme-color" content="#04131d">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Tiefenwacht">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./icon-192.png">
 <title>Tiefenwacht</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;800&family=Barlow:wght@400;500;600&display=swap">
 <style>
@@ -679,6 +683,14 @@ if('ResizeObserver'in window)new ResizeObserver(resize).observe(stage);
 addEventListener('resize',resize);addEventListener('orientationchange',()=>setTimeout(resize,200));
 resize();updateHUD();requestAnimationFrame(frame);
 })();
+</script>
+<script>
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js', { scope: './' })
+      .catch(error => console.warn('Offline-Modus konnte nicht aktiviert werden:', error));
+  });
+}
 </script>
 </body>
 </html>

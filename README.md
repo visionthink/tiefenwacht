@@ -1,10 +1,20 @@
 # Tiefenwacht
 
-Tower-Defense in der Tiefsee, als einzelne HTML-Datei ohne Abhängigkeiten. Gebaut für Tablets, läuft auch am Handy und am Desktop.
+Tower-Defense in der Tiefsee, als HTML-Spiel. Gebaut für Tablets, läuft auch am Handy und am Desktop.
 
-## Spielen
+## Spielen und als App installieren
 
-`index.html` im Browser öffnen. Mit GitHub Pages (Settings → Pages → Branch `main`) ist das Spiel unter `https://visionthink.github.io/tiefenwacht/` erreichbar.
+Online: https://visionthink.github.io/tiefenwacht/
+
+GitHub Pages muss unter Settings → Pages mit Branch `main` und Ordner `/ (root)` aktiviert sein.
+
+Android/Chrome: Die Spieladresse direkt in Chrome öffnen, dann im Menü **Zum Startbildschirm hinzufügen → Installieren** wählen (Bezeichnung je nach Chrome-Version).
+Tiefenwacht hat eine eigene App-Kennung und ist auf `/tiefenwacht/` begrenzt; Snake kann daneben installiert bleiben.
+
+Nach dem ersten vollständigen Online-Aufruf und der Einrichtung des Offline-Speichers funktioniert das Spiel auch ohne Internet.
+Externe Schriftarten benötigen Internet; offline werden Systemschriften verwendet.
+Falls Chrome noch eine alte Installationsmeldung zeigt: alle alten Spiel-Tabs schließen, die Spieladresse erneut direkt in Chrome öffnen und neu laden.
+Das Spiel kann weiterhin lokal durch Öffnen von `index.html` gespielt werden; die App-Installation und Offline-Speicherung über einen Service Worker benötigen HTTPS oder localhost.
 
 ## Inhalt
 
